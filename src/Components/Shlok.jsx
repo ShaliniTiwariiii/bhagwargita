@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import krishna from '../Assets/krishna.png'
 import Footer from './Footer';
-
-
+import { useRecoilValue } from 'recoil';
+import {bgAtom,colorAtom,modeAtom} from '../Atom'
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 export default function Shlock() {
 
     // const [url,setUrl] = useState("https://bhagavadgitaapi.in/slok/1/1/")
@@ -14,7 +16,10 @@ export default function Shlock() {
     const [TS, setTS] = useState(47)                    //total shlock in chapter state
 
     //------------------------- Fetching Geeta Shlok API---------------------------------//
-
+// const bgData=useRecoilValue(bgAtom)
+// const colorData=useRecoilValue(colorAtom)
+const modeData=useRecoilValue(modeAtom)
+// console.log(colorData,bgData)
     useEffect(() => {
 
         fetch("https://bhagavadgitaapi.in/slok/" + ch + "/" + shlockNo + "/")
@@ -42,10 +47,12 @@ export default function Shlock() {
         setCh(chapter)
         setTS(totalShlockInCh[chapter-1].ts)
     }
+ 
 
     return (
         <>
-            <div className="shlok ">
+            {/* <div className="shlok " style={{backgroundColor:bgData}}> */}
+            <div className="shlok " style={modeData?{backgroundColor:'black'}:{backgroundColor:'white'}}>
                 <div className="row">
 
                     <span className="image">
@@ -53,7 +60,7 @@ export default function Shlock() {
                         <img src={krishna} alt='Krishna_Image' className='d-block mx-auto'></img>
 
                     </span>
-
+                    {/* <button onClick={handleMode}> {mode? <NightlightIcon/> : <LightModeIcon  />}</button> */}
                     <span className="select">
                         <select className="shlokSelect"  onChange={chapterChange} >
 
@@ -68,7 +75,7 @@ export default function Shlock() {
 
                     <div className="shlokNumber">
                         <label className='label'>Shlok No </label>
-                        <input type="number" className="inp" defaultValue={1} min="1" max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>
+                        <input type="number" className="inp" defaultValue={1} min= '1' max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>
                     </div>
                 </div>
 

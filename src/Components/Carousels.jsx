@@ -2,13 +2,18 @@ import gita1 from '../assets/gita1.jpg'
 import gita2 from '../assets/gita2.jpg'
 import shreeKrishna from '../assets/shreeKrishna.jpg'
 import gita5 from '../assets/gita5.jpg'
+import krishnImg from '../assets/krishnImg.jpg'
+import k2 from '../assets/k2.jpg'
+import k3 from '../assets/k3.jpg'
+import k4 from '../assets/k4.jpg'
+import k5 from '../assets/k5.jpg'
 import { Carousel } from 'react-carousel-minimal';
 
 
 
 const data = [
     {
-      image: gita1,
+      image: k2,
       alt: 'Image 1',
     },
     {
@@ -16,11 +21,11 @@ const data = [
       alt: 'Image 2',
     },
     {
-      image: gita5,
+      image: k4,
       alt: 'Image 3',
     },
     {
-        image:shreeKrishna ,
+        image:k3 ,
         alt: 'Image 3',
       }
   ];
@@ -31,11 +36,11 @@ export default function Carousels() {
         data={data}
         time={4000}
         width="100%"
-        height="53rem"
+        height="40rem"
       
-        radius="10px"
+        radius="0px"
         slideNumber={true}
-       
+      padding='1rem'
         captionPosition="bottom"
         automatic={true}
         dots={true}

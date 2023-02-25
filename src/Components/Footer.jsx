@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="footer ">
             <div className="footercontainer">
                
-                    
+ 
                     
                         <h3 className="heading">Connect with me on</h3>
                         <div className="linkDiv">
@@ -24,7 +24,7 @@ export default function Footer() {
                            < FiTwitter style={{fontSize:'30px',color:'white'}}/>
                             </a>
                         </div>
-               
+                        <div className="blur"></div>
 
                     
             </div>

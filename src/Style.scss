@@ -4,7 +4,18 @@
   
   }
 }
+.blur{
 
+background: orange;
+border-radius: 50%;
+filter: blur(170px);
+z-index: 1;
+width: 18rem;
+height: 10rem;
+left: 0;
+position:absolute ;
+right: 1rem;
+}
 $shadow:#888888;
 
 .Navbar{
@@ -12,14 +23,14 @@ $shadow:#888888;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:3rem;
-    background-color: black;
-    color: white;
-    height: 3rem;
-   
+    gap:4rem;
+    background-color: #888888;
+   font-size: x-large;
+    height: 4rem;
+    position: sticky;
   :Link{
     text-decoration: none;
- 
+  color: white;
   }
   .active{
 color: white;
@@ -27,18 +38,34 @@ color: white;
 }
 
 .mainCh{
-    background-color:black;
+    background-color:#343434;
+    padding-bottom: 1rem;
     @media  screen and (max-width:480px) {
     display: flex;
     flex-direction: column;
    height: 60rem;
+
+   .checkbox{
+
+  @media screen and (max-width:480px) {
+    display: none;
+  }
+   }
+    }
+    .modeBtn{
+     margin: 1rem;
+     width: 2.5rem;
+     @media screen and (max-width:480px) {
+    width: 2.5rem;
+    }
+
     }
 .Chapter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   color: white;
+   //color: white;
     position: relative;
 
     
@@ -77,8 +104,13 @@ color: white;
         border:none;
         border-radius: 3px;
         box-shadow: 3px 3px $shadow;
-
+       
        }
+       button:hover{
+        cursor: pointer;
+        color: black;
+      }
+       
     }
 }
 
@@ -93,7 +125,7 @@ color: white;
      }
      
     p{
-      color: white;
+      //color: white;
       position: absolute;
       bottom: 2rem;
       left: 11%;
@@ -106,19 +138,19 @@ color: white;
     }
    .Ch{
     
-  color: white;
+  //color: white;
      margin-left:10rem;
     font-size:xx-large;
     padding: 1rem;
    }
    .Name{
-    color: white;
+   // color: white;
     position: absolute;
     left: 10rem;
     top: 5rem;
    }
    .summary{
-    color:white;
+   // color:white;
     position: absolute;
     top:1rem;
     width: 50rem;
@@ -150,16 +182,28 @@ width: 20rem;
    
    position: absolute;
    top:15rem;
-
+margin-top: 1rem;
   display: flex;
   gap: 1rem;
   button{
-    width: 5rem;
-    height: 2rem;
+    width: 6rem;
+    height: 2.5rem;
 background-color: #e9844ecb;
 color: white;
 font-weight: 600;
-  }
+padding: 1rem;
+border:none;
+display: flex;
+gap:0.5rem;
+margin-top:-1rem;
+box-shadow: 3px 3px $shadow;
+border-radius:5px;
+ }
+ button:hover{
+  cursor: pointer;
+  color: black;
+}
+ 
   @media  screen and (max-width:480px) {
      left: 13rem;
     top:24rem;
@@ -182,6 +226,7 @@ font-weight: 600;
    position: relative;
    font-family: Arial, Helvetica, sans-serif;
 
+  
   }
   .heading{
     margin-top: 3rem;
@@ -197,13 +242,19 @@ font-weight: 600;
 
 
 .shlok{
-   background-color: black;
+   background-color: #343434;
   position: relative;
   .row{
-   
+    
     .image{
-      border: 2px solid rgba(226, 64, 64, 0.834);
-      margin-left: 10rem;
+  
+      margin-left: 11rem;
+   padding-top:20rem;
+   @media  screen and (max-width:480px) {
+   display: none;
+// margin-left: 3rem;
+       }
+
     }
     .shree{
    display: flex;
@@ -214,10 +265,14 @@ font-weight: 600;
       position: absolute;
     
       top:20%;
-      right: 20%;
+      right: 40%;
+      @media  screen and (max-width:480px) {
+   
+      top:17%;left: 1%;
+               }
       .inp{
         color:white;
-        background-color: #111b21;
+        background-color: #888888;
       }
     }
     .txtDiv{
@@ -225,6 +280,10 @@ font-weight: 600;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media  screen and (max-width:480px) {
+      width: 22rem;
+       padding-left: 1%;
+                }
       .bhagwat{
         color: darkgoldenrod;
       }
@@ -234,15 +293,23 @@ font-weight: 600;
 top:5rem;
  height: 5rem;
   position: absolute;
-  margin-left: 20rem;
+  margin-left: 3rem;
+  @media  screen and (max-width:480px) {
+   left: rem;
+    top: 4.5rem;
+
+            }
  .shlokSelect{
   width: 10rem;
   height: 3rem;
   color: white;
   background-color:  #111b21;
-  // .opt{
-  //   margin-left: 5rem;
-  // }
+  @media  screen and (max-width:480px) {
+   width: 7rem;
+   height: 2rem;
+  margin-left: 10rem;
+  background-color: #888888;
+           }
  }
   }
 }
