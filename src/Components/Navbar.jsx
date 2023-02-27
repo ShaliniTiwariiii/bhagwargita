@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRecoilState } from 'recoil';
 import {modeAtom}from '../Atom'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 function Navbar() {
@@ -11,13 +11,13 @@ function Navbar() {
     }
   return (
     <div className='Navbar'style={modes?{background:'#343434'}:{background:'gray'}}>
-      <NavLink to='/' style={{color:'white'}}>
+      <Link to='/' style={{color:'white'}}>
         eGita
-      </NavLink>
+      </Link>
       
-      <NavLink to='Shlok' style={{color:'white'}}>
+      <Link to='Shlok' style={{color:'white'}}>
         Shloke
-      </NavLink>
+      </Link>
       
          <button className='modeBtn' onClick={handleMode}> {modes?   <LightModeIcon  />:<NightlightIcon/>}</button> 
     </div>
