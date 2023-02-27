@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import krishna from '../Assets/krishna.png'
 import Footer from './Footer';
 import { useRecoilValue } from 'recoil';
-import {modeAtom} from '../Atom'
+import { modeAtom } from '../Atom'
 
 export default function Shlock() {
 
@@ -13,10 +13,10 @@ export default function Shlock() {
     const [shlockHi, setShlockHi] = useState()       //translated shlock in Hindi
     const [shlockEn, setShlockEn] = useState()      //translated shlock in English
     const [TS, setTS] = useState(20)                    //total shlock in chapter state
-   
+
     //------------------------- Fetching Geeta Shlok API---------------------------------//
 
-const modeData=useRecoilValue(modeAtom)
+    const modeData = useRecoilValue(modeAtom)
 
     useEffect(() => {
 
@@ -40,30 +40,28 @@ const modeData=useRecoilValue(modeAtom)
         { "ch": 15, "ts": 20 }, { "ch": 16, "ts": 24 }, { "ch": 17, "ts": 28 }, { "ch": 18, "ts": 78 }
     ]
 
-    function chapterChange(event){
+    function chapterChange(event) {
         let chapter = event.target.value
         setCh(chapter)
-        setTS(totalShlockInCh[chapter-1].ts)
+        setTS(totalShlockInCh[chapter - 1].ts)
     }
- 
+
     return (
         <>
-           
-            <div className="shlok " style={modeData?{backgroundColor:'black'}:{backgroundColor:'white'}}>
+            <div className="shlok " style={modeData ? { backgroundColor: 'black' } : { backgroundColor: 'white' }}>
                 <div className="row">
 
                     <span className="image">
-                    
+
                         <img src={krishna} alt='Krishna_Image' className='d-block mx-auto'></img>
 
                     </span>
-                    
-                    <span className="select">
-                        <select className="shlokSelect"  onChange={chapterChange} >
 
-                            {
+                    <span className="select">
+                        <select className="shlokSelect" onChange={chapterChange} >
+                              {
                                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((i) => (
-                                    <option  value={i} key={i}>Chapter {i}</option>
+                                    <option value={i} key={i}>Chapter {i}</option>
                                 ))
                             }
 
@@ -71,9 +69,9 @@ const modeData=useRecoilValue(modeAtom)
                     </span>
 
                     <div className="shlokNumber" >
-                        <label className='label' style={modeData?{color:'white'}:{color:'black'}}>Shlok No </label>
-                        
-                        <input type="number" className="inp" defaultValue={1} min= '1' max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>
+                        <label className='label' style={modeData ? { color: 'white' } : { color: 'black' }}>Shlok No </label>
+
+                        <input type="number" className="inp" defaultValue={1} min='1' max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>
                     </div>
                 </div>
 
@@ -83,27 +81,27 @@ const modeData=useRecoilValue(modeAtom)
                     <div className='shree'>
                         <h1 className='shlock-title display-6 fw-bold lh-base'>||श्रीमद्‍भगवद्‍-गीता {ch}.{shlockNo}||</h1>
                     </div>
-                 <div className='txtDiv'>
-                    <div className="shloks" style={{ color: "darkgoldenrod" ,fontWeight:'700'}} >
-                        <h4 className='fw-bold'>{shlock}</h4>
-                    </div>
+                    <div className='txtDiv'>
+                        <div className="shloks" style={{ color: "darkgoldenrod", fontWeight: '700' }} >
+                            <h4 className='fw-bold'>{shlock}</h4>
+                        </div>
 
-                    <div className="col-md-8 mt-5 mx-auto text-center fw-bolder fs-5" style={{ color: '#FF7D19' ,fontWeight:'700'}} >
-                        <p>{shlockHi}</p>
-                    </div>
+                        <div className="col-md-8 mt-5 mx-auto text-center fw-bolder fs-5" style={{ color: '#FF7D19', fontWeight: '700' }} >
+                            <p>{shlockHi}</p>
+                        </div>
 
-                    <div className="col-md-8 mt-3 mx-auto text-center fw-bolder fs-5" style={{ color: "#FF7D19",fontWeight:'700' }} >
-                        <p>{shlockEn}</p>
-                    </div>
+                        <div className="col-md-8 mt-3 mx-auto text-center fw-bolder fs-5" style={{ color: "#FF7D19", fontWeight: '700' }} >
+                            <p>{shlockEn}</p>
+                        </div>
 
-                    <p className='bhagwat'>(Bhagavad Gita, Chapter {ch}, Shloka {shlockNo}) <br />
-                        
-                    </p>
+                        <p className='bhagwat'>(Bhagavad Gita, Chapter {ch}, Shloka {shlockNo}) <br />
+
+                        </p>
                     </div>
                 </div>
 
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 } 

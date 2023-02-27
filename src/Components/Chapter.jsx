@@ -3,15 +3,11 @@ import React, {useState, useEffect} from 'react'
 import Carousels from './Carousels'
 import { useSpeechSynthesis } from "react-speech-kit"
 import Footer from './Footer';
-
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
 import {completedAtom,modeAtom}from '../Atom'
 import { useRecoilState } from 'recoil';
 import { useRecoilValue } from 'recoil';
-
-
-
 
 
 function Chapter() {
@@ -39,13 +35,9 @@ const[ch,setChs]=useState(0)
 
   const modeData=useRecoilValue(modeAtom)
 
-
-
-const[completed,setCompleted]=useRecoilState(completedAtom)
-
-
-
-    useEffect(() => {
+  const[completed,setCompleted]=useRecoilState(completedAtom)
+  
+  useEffect(() => {
 
     fetch('https://bhagavadgitaapi.in/chapters/?api_key=b11f734eb00d87849')
         .then(
@@ -81,10 +73,9 @@ const[completed,setCompleted]=useRecoilState(completedAtom)
         setSummaryEn(data[0].summary.en) 
         setMeaningEn(data[0].meaning.en) 
         setMeaningHi(data[0].meaning.hi)}
+       
         function speakFun(){
-   
-
-          speak({text:summaryEn})
+      speak({text:summaryEn})
       }
       function handleStop() {
           window.speechSynthesis.cancel();
@@ -174,7 +165,7 @@ console.log(completed)
                    </span>
                     </div>
                     </div>
-                   <p  >(Bhagavad Gita, Chapter {chapter_number}) <br />
+                   <p>(Bhagavad Gita, Chapter {chapter_number}) <br />
                    </p> 
                  </div>
                   </div>

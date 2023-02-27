@@ -40,6 +40,10 @@ color: white;
 .mainCh{
     background-color:#343434;
     padding-bottom: 1rem;
+    @media  screen and (max-width:820px) {
+     height: 75rem;
+  
+      }
     @media  screen and (max-width:480px) {
     display: flex;
     flex-direction: column;
@@ -55,10 +59,11 @@ color: white;
     .modeBtn{
      margin: 1rem;
      width: 2.5rem;
+   
      @media screen and (max-width:480px) {
     width: 2.5rem;
     }
-
+   
     }
 .Chapter{
     display: flex;
@@ -73,14 +78,15 @@ color: white;
     width:10rem;
     position: absolute;
     height: 2rem;
-
-  
     box-shadow: 3px 3px $shadow;
     border: none;
-
     top:1rem;
     left:10rem;
     font-size: medium;
+    @media  screen and (max-width:820px) {
+    top:2rem;
+      left:1rem;
+       }
     @media  screen and (max-width:480px) {
    
    top:4rem;
@@ -91,6 +97,10 @@ color: white;
        
         position: absolute;
         right:10rem;
+        @media  screen and (max-width:820px) {
+        top:2rem;
+        right:2rem;
+          }
         @media  screen and (max-width:480px) {
         top:4rem;
         left: 2rem;
@@ -119,6 +129,10 @@ color: white;
      flex-direction: column;
      position: relative;
      height: 25rem;
+     @media  screen and (max-width:820px) {
+
+      margin-left: -5rem;
+        }
      @media  screen and (max-width:480px) {
 
    margin-left: -7rem;
@@ -155,7 +169,11 @@ color: white;
     top:1rem;
     width: 50rem;
     left: 40rem;
-
+    @media  screen and (max-width:820px) {
+   
+    
+      left: 30rem;
+    }
     @media  screen and (max-width:480px) {
    
    top: 10rem;
@@ -163,8 +181,17 @@ color: white;
     }
     //font-family: Arial, Helvetica, sans-serif;
     .summaryDiv{
-      @media screen and (max-width:480px
-      ) {
+
+      @media screen and (max-width:820px)
+      {
+        display: flex;
+     
+        width: 25rem;
+        height: auto;
+ margin-top: -1rem;
+     }
+      @media screen and (max-width:480px)
+       {
         display: flex;
 margin-left: 8.5rem;
       }
@@ -175,6 +202,11 @@ margin-left: 8.5rem;
    display: flex;
  
       word-spacing: 5px;
+      @media  screen and (max-width:820px) {
+       
+        line-height:1.2;
+width: 20rem;
+      }
       @media  screen and (max-width:480px) {
        
         line-height:1.2;
@@ -194,20 +226,24 @@ margin-top: 1rem;
 background-color: #e9844ecb;
 color: white;
 font-weight: 600;
-padding: 1rem;
+
 border:none;
 display: flex;
 gap:0.5rem;
+justify-content: center;
+align-items: center;
+margin-top:4rem;
 
-margin-top:2rem;
-// box-shadow: 3px 3px $shadow;
 border-radius:5px;
  }
  button:hover{
   cursor: pointer;
   color: black;
 }
- 
+@media  screen and (max-width:820px) {
+
+ top:21rem;
+     }
   @media  screen and (max-width:480px) {
      left: 13rem;
     top:24rem;
@@ -240,7 +276,7 @@ border-radius:5px;
     top:3rem;
     display: flex;
    margin-top:3rem ;
-    gap:1rem
+    gap:1rem;
   }
 }
 
@@ -264,6 +300,10 @@ border-radius:5px;
    position: absolute;
    bottom:35rem;
    left: 30%;
+   @media  screen and (max-width:820px) {
+   left:15%;
+  
+      }
    @media  screen and (max-width:480px) {
   
      left:-35%;
@@ -311,11 +351,12 @@ top:5rem;
   position: absolute;
   margin-left: 3rem;
   
+  @media  screen and (max-width:820px) {
+   left:-10rem;
+  }
   @media  screen and (max-width:480px) {
-
-    top: 4.5rem;
-
-            }
+  top: 4.5rem;
+}
  .shlokSelect{
 
   width: 10rem;
@@ -330,15 +371,10 @@ top:5rem;
    height: 2rem;
 
   background-color: #888888;
-left:50%;
+ left: 90%;
   top:25%;
            }
  }
   }
 }
 
-.Detail{
-  display: flex;
-  flex-direction: column;
-
-}
