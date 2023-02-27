@@ -58,7 +58,9 @@ export default function Shlock() {
                     </span>
 
                     <span className="select">
-                        <select className="shlokSelect" onChange={chapterChange} >
+                        <select 
+                        className="shlokSelect" 
+                        onChange={chapterChange} >
                               {
                                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((i) => (
                                     <option value={i} key={i}>Chapter {i}</option>
@@ -68,7 +70,9 @@ export default function Shlock() {
                         </select>
                     </span>
 
-                    <div className="shlokNumber" >
+                    <div 
+                    className="shlokNumber" 
+                    >
                         <label className='label' style={modeData ? { color: 'white' } : { color: 'black' }}>Shlok No </label>
 
                         <input type="number" className="inp" defaultValue={1} min='1' max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>

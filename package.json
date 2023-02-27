@@ -16,11 +16,9 @@
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
-    "react-carousel-minimal": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
-  
     "recoil": "^0.7.6",
     "sass": "^1.58.3"
   },
@@ -28,6 +26,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+   
     "vite": "^4.1.0"
   }
 }

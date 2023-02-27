@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react'
 import Carousels from './Carousels'
 //import { useSpeechSynthesis } from "react-speech-kit"
 import Footer from './Footer';
-import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
-import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
+// import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
+// import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
 import {completedAtom,modeAtom}from '../Atom'
 import { useRecoilState } from 'recoil';
 import { useRecoilValue } from 'recoil';
@@ -144,7 +144,7 @@ console.log(completed)
             <div className="chDiv">
 
                 <div className="">
-                    <h3 className='Ch'>{readLang ? "Chapter" : "अध्याय"} - {chapter_number}</h3>
+                    <h4 className='Ch'>{readLang ? "Chapter" : "अध्याय"} - {chapter_number}</h4>
 
                     <ul className='Name'>
                         <li className='list-group-item mb-2 fw-bold'>{readLang ? "Name - " + nameEn : "नाम - " + nameHi}</li>

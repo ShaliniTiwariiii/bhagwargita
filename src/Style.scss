@@ -134,7 +134,7 @@ color: white;
       margin-left: -5rem;
         }
      @media  screen and (max-width:480px) {
-
+  top: 10%;
    margin-left: -7rem;
      }
      
@@ -194,6 +194,7 @@ color: white;
        {
         display: flex;
 margin-left: 8.5rem;
+margin-top: 2rem;
       }
     }
     .lines{
@@ -296,12 +297,12 @@ border-radius:5px;
       margin-left: 11rem;
    padding-top:20rem;
    margin-top: rem;
-
+right:5%;
    position: absolute;
    bottom:35rem;
-   left: 30%;
+  //  left: 30%;
    @media  screen and (max-width:820px) {
-   left:15%;
+  //  left:15%;
   
       }
    @media  screen and (max-width:480px) {
@@ -313,13 +314,17 @@ border-radius:5px;
     .shree{
    display: flex;
    justify-content: center;
+   @media  screen and (max-width:480px) {
+    margin-top: 2rem;
+   }
+
     }
     .shlokNumber{
       color: white;
       position: absolute;
-      
       top:30%;
-      right: 20%;
+     left: 70%;
+    
       @media  screen and (max-width:480px) {
    
       top:35%;left: 10%;
@@ -335,8 +340,9 @@ border-radius:5px;
       justify-content: center;
       align-items: center;
       @media  screen and (max-width:480px) {
-      width: 22rem;
-       padding-left: 1%;
+      // width: 22rem;
+      //  padding-left: 1%;
+      margin-top: 2rem;
                 }
       .bhagwat{
         color: darkgoldenrod;
