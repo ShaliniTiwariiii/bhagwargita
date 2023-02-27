@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import krishna from '../Assets/krishna.png'
 import Footer from './Footer';
 import { useRecoilValue } from 'recoil';
-import {bgAtom,colorAtom,modeAtom} from '../Atom'
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightlightIcon from '@mui/icons-material/Nightlight';
+import {modeAtom} from '../Atom'
+
 export default function Shlock() {
 
     // const [url,setUrl] = useState("https://bhagavadgitaapi.in/slok/1/1/")
@@ -13,13 +12,12 @@ export default function Shlock() {
     const [shlock, setShlock] = useState()              //original shlock in Sanskrit
     const [shlockHi, setShlockHi] = useState()       //translated shlock in Hindi
     const [shlockEn, setShlockEn] = useState()      //translated shlock in English
-    const [TS, setTS] = useState(47)                    //total shlock in chapter state
-
+    const [TS, setTS] = useState(20)                    //total shlock in chapter state
+   
     //------------------------- Fetching Geeta Shlok API---------------------------------//
-// const bgData=useRecoilValue(bgAtom)
-// const colorData=useRecoilValue(colorAtom)
+
 const modeData=useRecoilValue(modeAtom)
-// console.log(colorData,bgData)
+
     useEffect(() => {
 
         fetch("https://bhagavadgitaapi.in/slok/" + ch + "/" + shlockNo + "/")
@@ -48,10 +46,9 @@ const modeData=useRecoilValue(modeAtom)
         setTS(totalShlockInCh[chapter-1].ts)
     }
  
-
     return (
         <>
-            {/* <div className="shlok " style={{backgroundColor:bgData}}> */}
+           
             <div className="shlok " style={modeData?{backgroundColor:'black'}:{backgroundColor:'white'}}>
                 <div className="row">
 
@@ -60,7 +57,7 @@ const modeData=useRecoilValue(modeAtom)
                         <img src={krishna} alt='Krishna_Image' className='d-block mx-auto'></img>
 
                     </span>
-                    {/* <button onClick={handleMode}> {mode? <NightlightIcon/> : <LightModeIcon  />}</button> */}
+                    
                     <span className="select">
                         <select className="shlokSelect"  onChange={chapterChange} >
 
@@ -73,8 +70,9 @@ const modeData=useRecoilValue(modeAtom)
                         </select>
                     </span>
 
-                    <div className="shlokNumber">
-                        <label className='label'>Shlok No </label>
+                    <div className="shlokNumber" >
+                        <label className='label' style={modeData?{color:'white'}:{color:'black'}}>Shlok No </label>
+                        
                         <input type="number" className="inp" defaultValue={1} min= '1' max={TS} onChange={(event) => setShlockNo(event.target.value)}></input>
                     </div>
                 </div>
@@ -86,15 +84,15 @@ const modeData=useRecoilValue(modeAtom)
                         <h1 className='shlock-title display-6 fw-bold lh-base'>||श्रीमद्‍भगवद्‍-गीता {ch}.{shlockNo}||</h1>
                     </div>
                  <div className='txtDiv'>
-                    <div className="shloks" style={{ color: "darkgoldenrod" }} >
+                    <div className="shloks" style={{ color: "darkgoldenrod" ,fontWeight:'700'}} >
                         <h4 className='fw-bold'>{shlock}</h4>
                     </div>
 
-                    <div className="col-md-8 mt-5 mx-auto text-center fw-bolder fs-5" style={{ color: '#FF7D19' }} >
+                    <div className="col-md-8 mt-5 mx-auto text-center fw-bolder fs-5" style={{ color: '#FF7D19' ,fontWeight:'700'}} >
                         <p>{shlockHi}</p>
                     </div>
 
-                    <div className="col-md-8 mt-3 mx-auto text-center fw-bolder fs-5" style={{ color: "#FF7D19" }} >
+                    <div className="col-md-8 mt-3 mx-auto text-center fw-bolder fs-5" style={{ color: "#FF7D19",fontWeight:'700' }} >
                         <p>{shlockEn}</p>
                     </div>
 

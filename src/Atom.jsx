@@ -15,3 +15,8 @@ export const modeAtom =atom({
     key:'modeatom',
     default:false
 })
+
+export const completedAtom =atom({
+    key:'comAtom',
+    default: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+})

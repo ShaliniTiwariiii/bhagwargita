@@ -27,7 +27,7 @@ $shadow:#888888;
     background-color: #888888;
    font-size: x-large;
     height: 4rem;
-    position: sticky;
+    // position: sticky;
   :Link{
     text-decoration: none;
   color: white;
@@ -48,7 +48,7 @@ color: white;
    .checkbox{
 
   @media screen and (max-width:480px) {
-    display: none;
+ display: none;
   }
    }
     }
@@ -118,7 +118,7 @@ color: white;
      display: flex;
      flex-direction: column;
      position: relative;
-     height: 20rem;
+     height: 25rem;
      @media  screen and (max-width:480px) {
 
    margin-left: -7rem;
@@ -171,10 +171,13 @@ margin-left: 8.5rem;
     }
     .lines{
       font-family: Arial, Helvetica, sans-serif;
+      line-height:2;
+   display: flex;
+ 
       word-spacing: 5px;
       @media  screen and (max-width:480px) {
        
-
+        line-height:1.2;
 width: 20rem;
       }
     }
@@ -195,8 +198,9 @@ padding: 1rem;
 border:none;
 display: flex;
 gap:0.5rem;
-margin-top:-1rem;
-box-shadow: 3px 3px $shadow;
+
+margin-top:2rem;
+// box-shadow: 3px 3px $shadow;
 border-radius:5px;
  }
  button:hover{
@@ -244,15 +248,25 @@ border-radius:5px;
 .shlok{
    background-color: #343434;
   position: relative;
-  .row{
-    
-    .image{
+  height: 50rem;
   
+
+  .row{
+  
+   height: 15rem;
+   padding-top: 2rem;
+    .image{
+  margin-top: 2rem;
       margin-left: 11rem;
    padding-top:20rem;
+   margin-top: rem;
+
+   position: absolute;
+   bottom:35rem;
+   left: 30%;
    @media  screen and (max-width:480px) {
-   display: none;
-// margin-left: 3rem;
+  
+     left:-35%;
        }
 
     }
@@ -263,12 +277,12 @@ border-radius:5px;
     .shlokNumber{
       color: white;
       position: absolute;
-    
-      top:20%;
-      right: 40%;
+      
+      top:30%;
+      right: 20%;
       @media  screen and (max-width:480px) {
    
-      top:17%;left: 1%;
+      top:35%;left: 10%;
                }
       .inp{
         color:white;
@@ -290,26 +304,41 @@ border-radius:5px;
     }
   }
   .select{
+   
 top:5rem;
- height: 5rem;
+ height: 100%;
+ width: 100%;
   position: absolute;
   margin-left: 3rem;
+  
   @media  screen and (max-width:480px) {
-   left: rem;
+
     top: 4.5rem;
 
             }
  .shlokSelect{
+
   width: 10rem;
   height: 3rem;
   color: white;
-  background-color:  #111b21;
+  position: absolute;
+  top:20%;
+  left:10rem;
+  background-color: grey;
   @media  screen and (max-width:480px) {
    width: 7rem;
    height: 2rem;
-  margin-left: 10rem;
+
   background-color: #888888;
+left:50%;
+  top:25%;
            }
  }
   }
+}
+
+.Detail{
+  display: flex;
+  flex-direction: column;
+
 }

@@ -6,6 +6,7 @@ import { Routes, Route} from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Chapter from './Components/Chapter';
 import Shlok from './Components/Shlok';
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Chapter/>}></Route>
         <Route path="shlok" element={<Shlok/>}></Route>
+       
       </Routes>
   
     </BrowserRouter>
