@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from 'react'
 import Carousels from './Carousels'
-import { useSpeechSynthesis } from "react-speech-kit"
+//import { useSpeechSynthesis } from "react-speech-kit"
 import Footer from './Footer';
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
@@ -27,7 +27,7 @@ function Chapter() {
 
 const[ch,setChs]=useState(0)
 
-  const { speak } = useSpeechSynthesis();
+ // const { speak } = useSpeechSynthesis();
 
   //change the language state of text on user requested
 
@@ -158,11 +158,11 @@ console.log(completed)
                     <h3 >{readLang ? "Summary" : "सारांश"}</h3>
                     <div className='summaryDiv'><span className='lines'>{readLang ? (summaryEn) : (summaryHi)}</span>
                    
-                   <span className='btns'>{readLang ? <button onClick={speakFun}>Read <VolumeUpOutlinedIcon/></button>:'' }
+                   {/* <span className='btns'>{readLang ? <button onClick={speakFun}>Read <VolumeUpOutlinedIcon/></button>:'' }
                     {readLang ?'': <button onClick={speakHindi}>पढ़ो <VolumeUpOutlinedIcon/></button> }
                     <button onClick={handleStop}>Stop <VolumeOffOutlinedIcon/></button>
                    
-                   </span>
+                   </span> */}
                     </div>
                     </div>
                    <p>(Bhagavad Gita, Chapter {chapter_number}) <br />

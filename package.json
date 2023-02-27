@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
-    "react-speech-kit": "^3.0.1",
+     "react-speech-kit": "^3.0.1",
     "recoil": "^0.7.6",
     "sass": "^1.58.3"
   },
