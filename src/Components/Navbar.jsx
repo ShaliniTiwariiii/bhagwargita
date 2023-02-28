@@ -16,7 +16,7 @@ function Navbar() {
       </Link>
       
       <Link to='Shlok' style={{color:'white'}}>
-        Shloke
+        Slok
       </Link>
       
          <button className='modeBtn' onClick={handleMode}> {modes?   <LightModeIcon  />:<NightlightIcon/>}</button> 

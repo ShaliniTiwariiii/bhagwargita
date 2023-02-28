@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import krishna from '../Assets/krishna.png'
+ import krishna from '../Assets/krishna.png'
 import Footer from './Footer';
 import { useRecoilValue } from 'recoil';
 import { modeAtom } from '../Atom'
@@ -53,8 +53,8 @@ export default function Shlock() {
 
                     <span className="image">
 
-                        {/* <img src={krishna} alt='Krishna_Image' className='d-block mx-auto'></img> */}
-
+                        <img src={krishna} alt='Krishna_Image' className='d-block mx-auto'></img>
+  
                     </span>
 
                     <span className="select">

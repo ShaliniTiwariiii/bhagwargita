@@ -3,8 +3,8 @@ import gita2 from '../assets/gita2.jpg'
 
 import k2 from '../assets/k2.jpg'
 import k3 from '../assets/k3.jpg'
-import k4 from '../assets/k4.jpg'
 
+import krish6 from '../assets/krish6.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -26,7 +26,7 @@ export default function Carousels() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={k4}
+          src={k3}
           alt="Second slide"
         />
 

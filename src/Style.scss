@@ -42,7 +42,7 @@ color: white;
     padding-bottom: 1rem;
     @media  screen and (max-width:820px) {
      height: 75rem;
-  
+
       }
     @media  screen and (max-width:480px) {
     display: flex;
@@ -72,8 +72,11 @@ color: white;
     align-items: center;
    //color: white;
     position: relative;
+   height: 6rem;
 
-    
+    @media screen and (max-width:820px) {
+      margin-top: 2rem;
+    }
     .Select{
     width:10rem;
     position: absolute;
@@ -129,21 +132,23 @@ color: white;
      flex-direction: column;
      position: relative;
      height: 25rem;
+
      @media  screen and (max-width:820px) {
 
       margin-left: -5rem;
         }
      @media  screen and (max-width:480px) {
-  top: 10%;
-   margin-left: -7rem;
+top:-1%;
+   margin-left: -8rem;
+     
      }
      
     p{
-      //color: white;
+
       position: absolute;
       bottom: 2rem;
       left: 11%;
-      //font-family: Arial, Helvetica, sans-serif;
+   
       @media  screen and (max-width:480px) {
        display: none;
 
@@ -156,12 +161,21 @@ color: white;
      margin-left:10rem;
     font-size:xx-large;
     padding: 1rem;
+
+    @media  screen and (max-width:480px) {
+   font-size: larger;
+   margin-left: 11rem;
+     }
    }
    .Name{
    // color: white;
     position: absolute;
     left: 10rem;
     top: 5rem;
+    @media  screen and (max-width:480px) {
+   margin-top: -2rem;
+
+        }
    }
    .summary{
    // color:white;
@@ -169,14 +183,15 @@ color: white;
     top:1rem;
     width: 50rem;
     left: 40rem;
+ 
     @media  screen and (max-width:820px) {
-   
+    left: 35rem;
     
-      left: 30rem;
+   
     }
     @media  screen and (max-width:480px) {
    
-   top: 10rem;
+   top: 5rem;
    left: 1rem;
     }
     //font-family: Arial, Helvetica, sans-serif;
@@ -188,13 +203,14 @@ color: white;
      
         width: 25rem;
         height: auto;
- margin-top: -1rem;
+
      }
       @media screen and (max-width:480px)
        {
         display: flex;
 margin-left: 8.5rem;
 margin-top: 2rem;
+
       }
     }
     .lines{
@@ -243,11 +259,11 @@ border-radius:5px;
 }
 @media  screen and (max-width:820px) {
 
- top:21rem;
+ top:19rem;
      }
   @media  screen and (max-width:480px) {
      left: 13rem;
-    top:24rem;
+    top:20rem;
         }
 
    }
@@ -303,48 +319,67 @@ right:5%;
    bottom:35rem;
   //  left: 30%;
    @media  screen and (max-width:820px) {
-  //  left:15%;
+   left:15%;
   
       }
    @media  screen and (max-width:480px) {
   
-     left:-35%;
+     left:-50%;
        }
 
     }
     .shree{
    display: flex;
    justify-content: center;
-   @media  screen and (max-width:480px) {
-    margin-top: 2rem;
+  
+   @media  screen and (max-width:820px) {
+
+  width: 820px;
    }
+   @media  screen and (max-width:480px) {
+  position: absolute;
+  width: 480px;
+   }  
 
     }
     .shlokNumber{
       color: white;
       position: absolute;
       top:30%;
-     left: 70%;
-    
+       left: 70%;
+     @media  screen and (max-width:820px) {
+   
+      top:25%; left: 40%;
+               }
       @media  screen and (max-width:480px) {
    
-      top:35%;left: 10%;
+      top:30%; left: 1%;
                }
       .inp{
         color:white;
         background-color: #888888;
       }
-    }
+    } 
     .txtDiv{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      @media  screen and (max-width:480px) {
-      // width: 22rem;
-      //  padding-left: 1%;
-      margin-top: 2rem;
+    
+      
+      @media  screen and (max-width:820px) {
+position: absolute;
+     top: 20rem;
+    padding-left: 2rem;
+ 
+   width: 820px;
+  
                 }
+                @media  screen and (max-width:480px) {
+                position: absolute;
+                  margin-top: 2rem;
+                  width: 400px;
+                            }
       .bhagwat{
         color: darkgoldenrod;
       }
@@ -357,9 +392,11 @@ top:5rem;
  width: 100%;
   position: absolute;
   margin-left: 3rem;
-  
+
   @media  screen and (max-width:820px) {
    left:-10rem;
+   top: 3%;
+ 
   }
   @media  screen and (max-width:480px) {
   top: 4.5rem;
@@ -378,8 +415,9 @@ top:5rem;
    height: 2rem;
 
   background-color: #888888;
- left: 90%;
-  top:25%;
+
+  top:21%;
+  left: 25%;
            }
  }
   }
